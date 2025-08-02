@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="red">
+ <form action="Formvalues" method="post">
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <!-- Language (Checkboxes) -->
+        <label>Language:</label><br>
+        <input type="checkbox" name="language" value="English-US"> English-US<br>
+        <input type="checkbox" name="language" value="Tamil"> Tamil<br>
+        <input type="checkbox" name="language" value="Hindi"> Hindi<br>
+        <input type="checkbox" name="language" value="Malayalam"> Malayalam<br><br>
+
+        <!-- Gender (Radio Buttons) -->
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" required> Male<br>
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+
+        <!-- Qualification (Dropdown) -->
+        <label for="qualification">Qualification:</label>
+        <select name="qualification" id="qualification">
+            <option value="M.C.A">M.C.A</option>
+            <option value="M.B.A">M.B.A</option>
+            <option value="M.S.C">M.S.C</option>
+            <option value="M.E">M.E</option>
+            <option value="M.B.B.S">M.B.B.S</option>
+        </select><br><br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Sign In">
+        <input type="reset" value="Clear">
+  </form>
+
+</body>
+</html>

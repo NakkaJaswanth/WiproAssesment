@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Student Registration Form</h2>
+    <form action="Register" method="get">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+
+        <label for="course">Course:</label>
+        <select name="course">
+            <option value="B.Tech">B.Tech</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="MBA">MBA</option>
+        </select><br><br>
+
+        <label for="hobbies">Hobbies:</label><br>
+        <input type="checkbox" name="hobbies" value="Reading"> Reading<br>
+        <input type="checkbox" name="hobbies" value="Sports"> Sports<br>
+        <input type="checkbox" name="hobbies" value="Music"> Music<br><br>
+
+        <input type="submit" value="register">
+    </form>
+
+</body>
+</html>
