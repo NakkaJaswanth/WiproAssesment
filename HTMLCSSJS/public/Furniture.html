@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Furniture Store Catalog</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4a3f35;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buy-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jaswanth Home Furniture</h1>
+        <p>Your comfort is our priority</p>
+    </header>
+
+    <div class="products">
+
+     
+        <div class="product-card" style="background-color: #e8f0fe;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwATHN4jSgG039O18RU88JWkuSXA8ZwusanQ&s" alt="Sofa">
+            <h3 style="color: darkblue;">Modern Sofa</h3>
+            <p>A comfortable and stylish sofa perfect for your living room.</p>
+            <div class="price">INR 10,000</div>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        
+        <div class="product-card">
+            <img src="https://images.jdmagicbox.com/quickquotes/images_main/teak-wood-dining-table-2025685369-72fu1mi3.jpg" alt="Table">
+            <h3>Wooden Dining Table</h3>
+            <p>Elegant dining table made of solid oak wood for lasting beauty.</p>
+            <div class="price">INR 40,000</div>
+            <button class="buy-btn" style="background-color: green; color: white;">Buy Now</button>
+        </div>
+
+      
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPbpTPlu5EIsNXaqgifU1WdUTQnoOW6CRQkg&s" alt="Chair">
+            <h3>Ergonomic Chair</h3>
+            <p>Designed for comfort and posture support in your home office.</p>
+            <div class="price">INR 1,200</div>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Feedback Survey</title>
+</head>
+<body>
+
+  
+  <header>
+    <h1>Website Feedback Survey</h1>
+    <p>We value your opinion. Please take a minute to share your thoughts.</p>
+  </header>
+
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+    <form>
+
+    
+      <section>
+        <h2>Personal Information</h2>
+        
+        <label for="fullname">Full Name:</label><br />
+        <input type="text" id="fullname" name="fullname" required /><br /><br />
+        
+        <label for="email">Email Address:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+        
+        <label for="age">Age:</label><br />
+        <input type="number" id="age" name="age" min="10" max="100" /><br /><br />
+      </section>
+
+      
+      <section>
+        <h2>Website Rating</h2>
+
+        <label for="design">Rate Website Design (1–10):</label><br />
+        <input type="range" id="design" name="design" min="1" max="10" /><br /><br />
+
+        <p>Rate Content Quality:</p>
+        <input type="radio" id="excellent" name="content" value="Excellent" />
+        <label for="excellent">Excellent</label><br />
+        
+        <input type="radio" id="good" name="content" value="Good" />
+        <label for="good">Good</label><br />
+        
+        <input type="radio" id="average" name="content" value="Average" />
+        <label for="average">Average</label><br />
+        
+        <input type="radio" id="poor" name="content" value="Poor" />
+        <label for="poor">Poor</label><br /><br />
+
+        <label for="visited">Most Visited Page:</label><br />
+        <select id="visited" name="visited">
+          <option value="home">Home</option>
+          <option value="blog">Blog</option>
+          <option value="products">Products</option>
+          <option value="contact">Contact</option>
+        </select><br /><br />
+      </section>
+
+     
+      <section>
+        <h2>Suggestions</h2>
+
+        <label for="suggestions">Your Suggestions:</label><br />
+        <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea><br /><br />
+
+        <input type="checkbox" id="agree" name="agree" />
+        <label for="agree">I agree to be contacted regarding my feedback</label><br /><br />
+      </section>
+
+      <input type="submit" value="Submit Feedback" />
+
+    </form>
+  </main>
+
+ 
+  <aside>
+    <p><strong>Motivational Note:</strong> Your feedback helps us improve our website experience for everyone.</p>
+  </aside>
+
+ 
+  <footer>
+    <p>© 2025 Website Survey</p>
+  </footer>
+
+</body>
+</html>
