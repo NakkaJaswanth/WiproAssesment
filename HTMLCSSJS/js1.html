@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Game</title>
+  <script>
+   
+    window.onload = function() {
+    
+      alert("Welcome to the Quiz Game!");
+
+      
+      const userName = prompt("What is your name?");
+
+      
+      const isReady = confirm(`Hi ${userName}, are you ready for the quiz?`);
+
+      if (isReady) {
+    
+        const answer = prompt("Which planet is known as the Red Planet?\nA. Earth\nB. Mars\nC. Jupiter\nD. Venus");
+
+      
+        if (answer.toLowerCase() === "b" || answer.toLowerCase() === "mars") {
+          alert("Correct! Mars is the Red Planet.");
+        } else {
+          alert("Wrong! The correct answer is B. Mars.");
+        }
+      } else {
+        alert("No problem! Come back when you're ready.");
+      }
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

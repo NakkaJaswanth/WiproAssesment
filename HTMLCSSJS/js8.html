@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8" />
+  <title>Switchboard Control</title>
+  <script>
+    window.onload = function () {
+      const buildingName = "Sunrise Apartments";
+      const devices = ["Light", "Fan", "AC"];
+      var i;
+      let status;
+
+      let output = "";
+
+      for (i = 0; i < devices.length; i++) {
+        status = (i % 2 === 0) ? "ON" : "OFF";
+        output += `Checking Switch ${i + 1}: ${devices[i]} is ${status}<br>`;
+      }
+
+      output += `All switches checked for ${buildingName}.<br>`;
+      output += `Outside loop: var counter is ${i}.<br>`;
+
+      try {
+        buildingName = "Sunset Villas";
+      } catch (error) {
+        output += `<br>Error when trying to reassign const buildingName: ${error.message}`;
+      }
+
+      document.body.innerHTML = output;
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>

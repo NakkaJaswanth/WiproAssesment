@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Equality and Inequality Checker</title>
+  <script>
+    function checkEquality() {
+     
+      const value1 = prompt("Enter the first value:");
+      const value2 = prompt("Enter the second value:");
+
+    
+      const value1Type = typeof value1;
+      const value2Type = typeof value2;
+
+      
+      const num1 = Number(value1);
+      const num2 = Number(value2);
+
+      
+      const looseEquality = (value1 == value2);
+      const strictEquality = (value1 === value2);
+      const looseInequality = (value1 != value2);
+      const strictInequality = (value1 !== value2);
+
+      
+      const result = `
+First Value: ${value1} (${value1Type})
+Second Value: ${value2} (${value2Type})
+
+Using == : ${looseEquality} → Equality ignores type
+Using === : ${strictEquality} → Strict equality checks type too
+Using != : ${looseInequality} → Inequality ignores type
+Using !== : ${strictInequality} → Strict inequality checks type and value
+
+Value1 converted to Number: ${isNaN(num1) ? 'NaN' : num1}
+Value2 converted to Number: ${isNaN(num2) ? 'NaN' : num2}
+`;
+
+      alert(result);
+    }
+
+    window.onload = checkEquality;
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RTO Vehicle Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .progress-bar {
+      transition: width 0.4s ease;
+    }
+    .toast-container {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<div class="container my-4">
+  <h2 class="text-center mb-3">RTO Vehicle Registration Form</h2>
+
+  <div class="progress mb-3">
+    <div id="formProgress" class="progress-bar bg-success" style="width: 0%"></div>
+  </div>
+
+  <form id="rtoForm" enctype="multipart/form-data">
+    <div class="accordion" id="formAccordion">
+      
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="ownerHeading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ownerSection">
+            1. Owner Information
+          </button>
+        </h2>
+        <div id="ownerSection" class="accordion-collapse collapse show" data-bs-parent="#formAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="ownerName" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Mobile (India)</label>
+              <input type="tel" id="mobile" pattern="[6-9]\d{9}" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" id="dob" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Aadhaar</label>
+              <input type="text" id="aadhaar" pattern="\d{12}" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">PAN</label>
+              <input type="text" id="pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]" class="form-control" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="addressHeading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addressSection">
+            2. Address
+          </button>
+        </h2>
+        <div id="addressSection" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Address Line</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">City</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">State</label>
+              <select class="form-select" required>
+                <option value="">Choose...</option>
+                <option>Tamil Nadu</option>
+                <option>Karnataka</option>
+                <option>Maharashtra</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">PIN</label>
+              <input type="text" pattern="\d{6}" class="form-control" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="vehicleHeading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vehicleSection">
+            3. Vehicle Details
+          </button>
+        </h2>
+        <div id="vehicleSection" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Registration Number</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Class</label>
+              <select class="form-select" required>
+                <option value="">Select...</option>
+                <option>Two Wheeler</option>
+                <option>Four Wheeler</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Fuel</label><br>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="fuel" class="form-check-input" required>
+                <label class="form-check-label">Petrol</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="fuel" class="form-check-input" required>
+                <label class="form-check-label">Diesel</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Make & Model</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Chassis No.</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Engine No.</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Year of Manufacture</label>
+              <input type="number" max="2025" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Purchase Date</label>
+              <input type="date" max="2025-08-13" class="form-control" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="complianceHeading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#complianceSection">
+            4. Compliance & Insurance
+          </button>
+        </h2>
+        <div id="complianceSection" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-3">
+              <label class="form-label">Emission Norm</label>
+              <select class="form-select" required>
+                <option value="">Choose...</option>
+                <option>BS-III</option>
+                <option>BS-IV</option>
+                <option>BS-VI</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Insurance Policy No.</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Insurer</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Insurance Expiry</label>
+              <input type="date" min="2025-08-13" class="form-control" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="uploadHeading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uploadSection">
+            5. Uploads
+          </button>
+        </h2>
+        <div id="uploadSection" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-md-6">
+              <label class="form-label">ID/Address Proof</label>
+              <input type="file" accept=".pdf,.jpg,.png" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Insurance Copy</label>
+              <input type="file" accept=".pdf,.jpg,.png" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Vehicle Image (Optional)</label>
+              <input type="file" accept=".jpg,.png" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+
+   
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="declarationHeading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#declarationSection">
+            6. Declarations
+          </button>
+        </h2>
+        <div id="declarationSection" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+          <div class="accordion-body">
+            <div class="form-check mb-2">
+              <input type="checkbox" class="form-check-input" id="terms" required>
+              <label class="form-check-label" for="terms">I accept the terms and conditions.</label>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">CAPTCHA: What is 5 + 3?</label>
+              <input type="number" id="captcha" class="form-control" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-3 text-center">
+      <button type="submit" id="submitBtn" class="btn btn-primary" disabled>Submit</button>
+    </div>
+  </form>
+</div>
+
+<div class="toast-container">
+  <div id="toastSuccess" class="toast align-items-center text-white bg-success border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body">
+        Application submitted successfully!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const form = document.getElementById('rtoForm');
+  const progress = document.getElementById('formProgress');
+  const submitBtn = document.getElementById('submitBtn');
+  const captcha = document.getElementById('captcha');
+
+  
+  form.addEventListener('input', () => {
+    const allValid = form.checkValidity();
+    const correctCaptcha = captcha.value == 8;
+    submitBtn.disabled = !(allValid && correctCaptcha);
+
+   
+    const inputs = form.querySelectorAll('input, select');
+    let filled = 0;
+    inputs.forEach(input => {
+      if (input.checkValidity()) filled++;
+    });
+    const percent = Math.floor((filled / inputs.length) * 100);
+    progress.style.width = percent + '%';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const toast = new bootstrap.Toast(document.getElementById('toastSuccess'));
+    toast.show();
+    form.reset();
+    progress.style.width = '0%';
+    submitBtn.disabled = true;
+  });
+</script>
+
+</body>
+</html>

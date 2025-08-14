@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Income Tax Calculator</title>
+  <script>
+    function calculateTax() {
+     
+      const name = prompt("Enter your full name:");
+
+      
+      let pan;
+      do {
+        pan = prompt("Enter your PAN number (10 characters, uppercase):");
+      } while (!pan || pan.length !== 10 || pan !== pan.toUpperCase());
+
+      
+      const dobInput = prompt("Enter your Date of Birth (YYYY-MM-DD):");
+      const dob = new Date(dobInput);
+      const today = new Date();
+      let age = today.getFullYear() - dob.getFullYear();
+      const m = today.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+
+  
+      const income = parseFloat(prompt("Enter your annual income (in ₹):"));
+
+    
+      let tax = 0;
+      if (income <= 250000) {
+        tax = 0;
+      } else if (income <= 500000) {
+        tax = 0.05 * (income - 250000);
+      } else if (income <= 1000000) {
+        tax = 0.05 * 250000 + 0.2 * (income - 500000);
+      } else {
+        tax = 0.05 * 250000 + 0.2 * 500000 + 0.3 * (income - 1000000);
+      }
+
+      tax = Math.round(tax); 
+
+     
+      const result = `
+Name: ${name.toUpperCase()}
+PAN: ${pan}
+Age: ${age} years
+Annual Income: ₹${income}
+Calculated Tax: ₹${tax}
+      `;
+
+      alert(result);
+    }
+
+    window.onload = calculateTax;
+  </script>
+</head>
+<body>
+</body>
+</html>

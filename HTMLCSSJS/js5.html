@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bank Customer Management</title>
+  <script>
+    function manageCustomers() {
+    
+      const count = parseInt(prompt("How many customers would you like to register?"));
+      const customers = [];
+
+      
+      for (let i = 0; i < count; i++) {
+        const name = prompt(`Enter name for customer ${i + 1}:`);
+        customers.push(name);
+      }
+
+      
+      let output = `Original Customers: ${customers.join(", ")}\n\nCustomers using for...of:\n`;
+      for (const customer of customers) {
+        output += customer + "\n";
+      }
+
+  
+      output += `\nCustomer IDs using for...in:\n`;
+      for (const index in customers) {
+        output += index + "\n";
+      }
+
+    
+      const newCustomer = prompt("Enter the name of a new customer to add :");
+      customers[customers.length] = newCustomer;  
+      output += `\nAfter manual push('${newCustomer}'): ${customers.join(", ")}`;
+
+     
+      const confirmPop = confirm("Do you want to remove the last customer");
+      if (confirmPop) {
+        customers.length = customers.length - 1; 
+        output += `\nAfter manual pop(): ${customers.join(", ")}`;
+      }
+
+     
+      const insertName = prompt("Enter a name to insert:");
+      const insertPos = parseInt(prompt(`Enter position (0 to ${customers.length}) to insert '${insertName}':`));
+      customers.splice(insertPos, 0, insertName);
+      output += `\nAfter inserting '${insertName}' at position ${insertPos}: ${customers.join(", ")}`;
+
+      
+      const deletePos = parseInt(prompt(`Enter position (0 to ${customers.length - 1}) to delete customer:`));
+      customers.splice(deletePos, 1);
+      output += `\nAfter deleting at position ${deletePos}: ${customers.join(", ")}`;
+
+     
+      output += `\nFinal Customers: ${customers.join(", ")}`;
+
+      alert(output);
+    }
+
+    window.onload = manageCustomers;
+  </script>
+</head>
+<body>
+</body>
+</html>
