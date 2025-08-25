@@ -17,7 +17,38 @@ import TailorShop from './REACTFILES/TailorShop';
 import Fruits from './REACTFILES/Fruits';
 import { TelevisionManager } from './REACTFILES/TelevisionComponents';
 import MarriageForm from './REACTFILES/MarriageForm';
+import AccessoriesForm from './REACTFILES/AccessoriesForm'; 
+import BakingForm from "./REACTFILES/BakingForm";
+import { FlightBookingControlled, FlightBookingUncontrolled } from "./REACTFILES/FlightBookingForms";
+import MovieForm from "./REACTFILES/MovieForm";
+import ElectronicProductDetails  from "./REACTFILES/ElectronicProductDetails";
+import FurnitureAppSwitch from "./REACTFILES/FurnitureAppSwitch";
+import FestivalApp from "./REACTFILES/FestivalApp"; 
+import RestaurantForm from "./REACTFILES/RestaurantForm";
+import FruitCommunicationApp from "./REACTFILES/FruitCommunicationApp";
 
+
+
+import ChessTournamentForm from "./REACTFILES/ChessTournamentForm"; 
+import HockeyTournamentForm from "./REACTFILES/HockeyTournamentForm"; 
+import Tailors from './REACTFILES/Tailors';
+import PlayerManagement from './REACTFILES/PlayerManagement';
+import { PowerCutProvider } from './REACTFILES/PowerCutContext';
+import SendAnnouncement from './REACTFILES/SendAnnouncement';
+import AnnouncementList from './REACTFILES/AnnouncementList';
+import { Routes, Route } from 'react-router-dom';
+
+import Navbar from './REACTFILES/Navbar';
+
+import Home from './REACTFILES/Home';
+import AddTaxpayer from './REACTFILES/AddTaxpayer';
+import TaxpayerList from './REACTFILES/TaxpayerList';
+import CalculateTax from './REACTFILES/CalculateTax';
+import TaxRates from './REACTFILES/TaxRates';
+import Contact from './REACTFILES/Contact';
+import About from './REACTFILES/About';
+import FAQ from './REACTFILES/FAQ';
+import NotFound from './REACTFILES/NotFound';
 
 /*
 function App() {
@@ -88,8 +119,50 @@ function App() {
       <Fruits />
       <TelevisionManager />
        <MarriageForm />
+       <ElectronicProductDetails/>
+       <AccessoriesForm />
+           <BakingForm />
+           
+       
+            <FlightBookingControlled />
+             <hr />
+             <FlightBookingUncontrolled />
+             <MovieForm />
+       
+               <ChessTournamentForm />
+        <FurnitureAppSwitch />
+         <FestivalApp />
+        <RestaurantForm />
+        <FruitCommunicationApp />
+         <ChessTournamentForm />
+           <HockeyTournamentForm />
+            <Tailors/>
+                <PlayerManagement />
+         <PowerCutProvider>
+      <div className="container mt-5">
+        <h2 className="mb-4">Electricity Power Cut Announcements</h2>
+        <SendAnnouncement />
+        <AnnouncementList />
+      </div>
+    </PowerCutProvider>
+      <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add-taxpayer" element={<AddTaxpayer />} />
+        <Route path="/taxpayer-list" element={<TaxpayerList />} />
+        <Route path="/calculate-tax" element={<CalculateTax />} />
+        <Route path="/tax-rates" element={<TaxRates />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>  
        
     </div>
+    
+    
   );
 }
 

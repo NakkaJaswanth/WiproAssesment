@@ -3,32 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import TailorShop from "./REACTFILES/TailorShop";
-import MarriageForm from './REACTFILES/MarriageForm';
-import AccessoriesForm from './REACTFILES/AccessoriesForm'; 
-import BakingForm from "./REACTFILES/BakingForm";
-import { FlightBookingControlled, FlightBookingUncontrolled } from "./REACTFILES/FlightBookingForms";
-import MovieForm from "./REACTFILES/MovieForm";
+import { PowerCutProvider } from './REACTFILES/PowerCutContext';
+import { BrowserRouter } from 'react-router-dom'; 
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <AccessoriesForm />
-    <BakingForm />
+      <BrowserRouter>          
+      <PowerCutProvider>     {/* Wrap with PowerCutProvider */}
+        <App />
+      </PowerCutProvider>
+    </BrowserRouter>
+       
     
-
-     <FlightBookingControlled />
-      <hr />
-      <FlightBookingUncontrolled />
-      <MovieForm />
-
-    
-    
-    
-
   </React.StrictMode>
   
 );

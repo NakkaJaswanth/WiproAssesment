@@ -1,0 +1,43 @@
+{
+  "players": [
+    {
+      "id": "1",
+      "name": "Lionel Messi",
+      "age": 36,
+      "position": "Forward",
+      "club": "Inter Miami",
+      "nationality": "Argentina",
+      "goals": 30,
+      "matchesPlayed": 25,
+      "jerseyNumber": 10,
+      "email": "messi@gmail.com",
+      "contactNumber": "8367611833"
+    },
+    {
+      "id": "2",
+      "name": "Cristiano Ronaldo",
+      "age": 38,
+      "position": "Forward",
+      "club": "Al Nassr",
+      "nationality": "Portugal",
+      "goals": 28,
+      "matchesPlayed": 27,
+      "jerseyNumber": 7,
+      "email": "ronaldo@gmail.com",
+      "contactNumber": "9123456780"
+    },
+    {
+      "id": "8058",
+      "name": "Jaswanth",
+      "age": 23,
+      "position": "Forward",
+      "club": "Andhra",
+      "nationality": "INDIAN",
+      "goals": 20,
+      "matchesPlayed": 15,
+      "jerseyNumber": 24,
+      "email": "jaswanth@gmail.com",
+      "contactNumber": "8367611833"
+    }
+  ]
+}
