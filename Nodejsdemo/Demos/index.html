@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courier Booking Form</title>
+</head>
+<body>
+  <h2>Courier Booking Form</h2>
+  <form action="/submit" method="POST">
+    <label for="trackingId">Tracking ID:</label><br>
+    <input type="text" id="trackingId" name="trackingId" required><br><br>
+
+    <label for="senderName">Sender Name:</label><br>
+    <input type="text" id="senderName" name="senderName" required><br><br>
+
+    <label for="receiverName">Receiver Name:</label><br>
+    <input type="text" id="receiverName" name="receiverName" required><br><br>
+
+    <label for="pickupAddress">Pickup Address:</label><br>
+    <input type="text" id="pickupAddress" name="pickupAddress" required><br><br>
+
+    <label for="deliveryAddress">Delivery Address:</label><br>
+    <input type="text" id="deliveryAddress" name="deliveryAddress" required><br><br>
+
+    <label for="weight">Weight (kg):</label><br>
+    <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+
+    <button type="submit">Book Courier</button>
+  </form>
+</body>
+</html>
